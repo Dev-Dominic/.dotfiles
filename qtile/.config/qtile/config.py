@@ -2,10 +2,6 @@ from libqtile import bar, hook, layout, widget
 from libqtile.command import lazy
 from libqtile.config import Click, Drag, Group, Key, Screen
 
-from libqtile.bar import Bar
-from libqtile.widget import Spacer
-from powerline.bindings.qtile.widget import PowerlineTextBox
-
 wmname = 'qtile'
 mod = 'mod1'
 
