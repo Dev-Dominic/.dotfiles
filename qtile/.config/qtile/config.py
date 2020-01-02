@@ -100,6 +100,8 @@ screens = [
                 widget.WindowName(),
                 widget.Systray(),
                 widget.Clock(format='%a %d %b %I:%M %p'),
+                widget.BatteryIcon(update_interval=1),
+                #widget.Battery(format='{char} {percent:2.0%}', update_interval=1),
             ],
             size=30,
             background=['222222', '111111'],
