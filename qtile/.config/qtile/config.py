@@ -40,6 +40,20 @@ keys = [
 
     # ROFI program spawner
     Key([mod], 'r', lazy.spawn("rofi -show run")),
+
+    # Change the volume if your keyboard has special volume keys.
+    Key(
+        [], "XF86AudioRaiseVolume",
+        lazy.spawn("amixer -c 0 -q set Master 2dB+")
+    ),
+    Key(
+        [], "XF86AudioLowerVolume",
+        lazy.spawn("amixer -c 0 -q set Master 2dB-")
+    ),
+    Key(
+        [], "XF86AudioMute",
+        lazy.spawn("amixer -c 0 -q set Master toggle")
+    ),
 ]
 
 # Mouse bindings and options
@@ -101,7 +115,7 @@ screens = [
                 widget.Systray(),
                 widget.Clock(format='%a %d %b %I:%M %p'),
                 widget.BatteryIcon(update_interval=1),
-                #widget.Battery(format='{char} {percent:2.0%}', update_interval=1),
+                widget.Volume(update_interval=0.2),
             ],
             size=30,
             background=['222222', '111111'],
