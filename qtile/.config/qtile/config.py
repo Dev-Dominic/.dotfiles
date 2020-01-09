@@ -41,18 +41,18 @@ keys = [
     # ROFI program spawner
     Key([mod], 'r', lazy.spawn("rofi -show run")),
 
-    # Change the volume if your keyboard has special volume keys.
+    # Volume Control
     Key(
         [], "XF86AudioRaiseVolume",
-        lazy.spawn("amixer -c 0 -q set Master 2dB+")
+        lazy.spawn("pactl set-sink-volume 0 +10%")
     ),
     Key(
         [], "XF86AudioLowerVolume",
-        lazy.spawn("amixer -c 0 -q set Master 2dB-")
+        lazy.spawn("pactl set-sink-volume 0 -10%")
     ),
     Key(
         [], "XF86AudioMute",
-        lazy.spawn("amixer -c 0 -q set Master toggle")
+        lazy.spawn("pactl set-sink-mute 0 toggle")
     ),
 ]
 
@@ -115,7 +115,6 @@ screens = [
                 widget.Systray(),
                 widget.Clock(format='%a %d %b %I:%M %p'),
                 widget.BatteryIcon(update_interval=1),
-                widget.Volume(update_interval=0.2),
             ],
             size=30,
             background=['222222', '111111'],
@@ -134,3 +133,7 @@ auto_fullscreen = True
 def main(qtile):
     ''' This function is called when Qtile starts. '''
     lazy.spawn('redshift')
+
+    # Pulseaudio volume control daemon
+    lazy.spawn('pulseaudio --start')
+    lazy.spawn('pactl set-sink-volume 0 25%') # Default boot volume
