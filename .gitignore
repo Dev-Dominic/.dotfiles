@@ -1,2 +1,3 @@
 nvim/.config/nvim/plugged/* 
 qtile/.config/qtile/__pycache__/*
+qtile/.config/qtile/__pycache__
