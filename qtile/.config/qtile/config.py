@@ -136,3 +136,4 @@ def main(qtile):
 
     # Pulseaudio volume control daemon
     lazy.spawn('pulseaudio --start')
+    lazy.spawn('pactl set-sink-volume 0 25%') # Default boot volume
