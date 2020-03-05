@@ -8,6 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 alias vim=nvim
 alias courseFolder="~/OneDrive/UWI\ FOLDER/Course\ Notes"
 alias compFolder="~/OneDrive/UWI\ FOLDER/Course\ Notes/Computer\ Science"
+alias programFolder="~/OneDrive/Programming_Folder"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

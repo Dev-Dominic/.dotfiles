@@ -3,16 +3,15 @@ call plug#begin()
 
 " Auto Completion(Coc)
 " Plug 'neoclide/coc.nvim', { 'branch' : 'release' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi' " Python 
-Plug 'wokalski/autocomplete-flow' " Javascript
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' } " PHP
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'zchee/deoplete-jedi' " Python 
+"Plug 'wokalski/autocomplete-flow' " Javascript
+"Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' } " PHP
 
 
 " Snippet Autocompletion supplement
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets' " Language Snippet Repo
-
+"Plug 'Shougo/neosnippet'
+"Plug 'Shougo/neosnippet-snippets' " Language Snippet Repo
 
 " Nerd Plugins
 Plug 'scrooloose/nerdtree' " File Explorer
@@ -58,33 +57,33 @@ set number
 set relativenumber
 
 " Autocompletion (doeplete)
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 
-" PHP deoplete 
-let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-let g:deoplete#ignore_sources.php = ['omni']
+"" PHP deoplete 
+"let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+"let g:deoplete#ignore_sources.php = ['omni']
 
-" Language Snippets (neosnippet)
-let g:neosnippet#enable_completed_snippet = 1
+"" Language Snippets (neosnippet)
+"let g:neosnippet#enable_completed_snippet = 1
 
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+"" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+"xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+"" SuperTab like snippets behavior.
+"" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+""imap <expr><TAB>
+"" \ pumvisible() ? "\<C-n>" :
+"" \ neosnippet#expandable_or_jumpable() ?
+"" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
-" For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
+"" For conceal markers.
+"if has('conceal')
+  "set conceallevel=2 concealcursor=niv
+"endif
 
 " Language Snippets (end)
 
