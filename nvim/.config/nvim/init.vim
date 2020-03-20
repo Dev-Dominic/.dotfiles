@@ -24,8 +24,10 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Git 
 Plug 'airblade/vim-gitgutter'
 
-" Pandoc Markdown Preview
-Plug 'conornewton/vim-pandoc-markdown-preview'
+" Markdown Previews
+Plug 'conornewton/vim-pandoc-markdown-preview' " Pandoc Markdown Preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " Browser markdown preview
+
 
 " Neovim bottom bar 
 Plug 'bling/vim-airline'
