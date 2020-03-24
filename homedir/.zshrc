@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export PATTOO_CONFIGDIR="/home/dominic/Documents/Calico/pattoo/config"
 
 # Aliases 
 alias vim=nvim
