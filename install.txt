@@ -1,0 +1,15 @@
+zsh 
+rxvt-unicode
+pulseaudio
+alsa
+neovim
+qtile
+git
+python3
+firefox
+feh
+zathura
+libre-office
+base-devel
+stow 
+
