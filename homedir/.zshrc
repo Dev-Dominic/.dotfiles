@@ -7,9 +7,15 @@ export PATTOO_CONFIGDIR="/home/dominic/Documents/Calico/pattoo/config"
 
 # Aliases 
 alias vim=nvim
+
+# Folder Aliases
 alias courseFolder="~/OneDrive/UWI\ FOLDER/Course\ Notes"
 alias compFolder="~/OneDrive/UWI\ FOLDER/Course\ Notes/Computer\ Science"
-alias programFolder="~/OneDrive/Programming_Folder"
+alias programFolder="~/Documents/Programming_Folder"
+
+# Open file Aliases 
+alias evim='vim ~/.dotfiles/nvim/.config/nvim/init.vim' # Opens for edits to neovim config
+alias qvim='vim ~/.config/qtile/config.py'  # Opens for edits to qtile config
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
