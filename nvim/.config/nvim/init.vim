@@ -16,8 +16,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'conornewton/vim-pandoc-markdown-preview' " Pandoc Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " Browser markdown preview
 
-" Neovim bottom bar 
-Plug 'bling/vim-airline'
+" Neovim bottom bar (lightline)
+Plug 'itchyny/lightline.vim'
+
+" Colorschemes
+Plug 'flazz/vim-colorschemes'
 
 " Surround 
 Plug 'tpope/vim-surround'
@@ -44,6 +47,10 @@ set smartindent
 set number
 set relativenumber
 
+" Setting colorscheme
+colorscheme gruvbox
+highlight Normal ctermbg=none
+
 " NERD STUFF 
 " NerdTree Config
 noremap <leader>n :NERDTreeToggle<CR>
@@ -69,3 +76,7 @@ noremap <leader>n :NERDTreeToggle<CR>
 
 " Pandoc Markdown Preview 
 let g:md_pdf_viewer="zathura" " Default Pdf previewer
+
+" Markdown-Preview
+let g:mkdp_browser = 'brave'
+let g:mkdp_port = '9000'
