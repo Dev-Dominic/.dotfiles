@@ -1,6 +1,7 @@
 from libqtile import bar, hook, layout, widget
 from libqtile.command import lazy
 from libqtile.config import Click, Drag, Group, Key, Screen
+import os
 
 wmname = 'qtile'
 mod = 'mod1'
@@ -129,10 +130,11 @@ widget_defaults = dict(
 
 auto_fullscreen = True
 
+def autostart(): 
+    os.system('feh --bg-scale ~/Pictures/wallpapers/akira_wallpaper.png')
 
 def main(qtile):
-    ''' This function is called when Qtile starts. '''
-    lazy.spawn('redshift')
+    autostart()
 
     # Pulseaudio volume control daemon
     lazy.spawn('pulseaudio --start')
