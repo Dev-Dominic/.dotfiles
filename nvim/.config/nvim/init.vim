@@ -22,11 +22,8 @@ Plug 'itchyny/lightline.vim'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 
-" Surround 
-Plug 'tpope/vim-surround'
-
-" MISC Plugins
-Plug 'Raimondi/delimitMate' " Autocompletes brackets, quotes and parenthesis
+" Allow for closing of delimiters
+Plug 'cohama/lexima.vim'
 
 call plug#end()
 
@@ -80,3 +77,4 @@ let g:md_pdf_viewer="zathura" " Default Pdf previewer
 " Markdown-Preview
 let g:mkdp_browser = 'brave'
 let g:mkdp_port = '9000'
+noremap <leader>pm :MarkdownPreviewToggle<CR>

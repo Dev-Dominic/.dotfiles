@@ -44,7 +44,7 @@ URxvt*scrollBar_right: false
 URxvt*internalBorder: 0
 URxvt*externalBorder: 0
 URxvt*letterSpace: 0
-URxvt.font: xft:Source Code Pro Medium:size=8:hinting=true,xft:DejaVu Sans:size=8:hinting=true
+URxvt.font: xft:monospace :size=8
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,resize-font
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
@@ -60,4 +60,4 @@ URxvt.tabbed.tab-fg: 15
 URxvt.tabbed.tab-bg: 4
 URxvt*buffered: false
 URxvt*transparent: true
-URxvt*shading: 35
+URxvt*shading: 15
