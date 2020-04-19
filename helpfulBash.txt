@@ -1,0 +1,13 @@
+"grep -rnw <path-to-somewhere> -e <pattern>" (recusrively looks for patterns within a given path)
+    * -r or -R is recursive,
+    * -n is line number, and
+    * -w stands for match the whole word.
+    * -l (lower-case L) can be added to just give the file name of matching files. 
+
+"netstat -tulpn | grep LISTEN" (Get's all open sockets TCP/UDP on system)
+   * -t : All TCP ports
+   * -u : All UDP ports
+   * -l : Display listening server sockets
+   * -p : Show the PID and name of the program to which each socket belongs
+   * -n : Don’t resolve names
+   * | grep LISTEN : Only display open ports by applying grep command filter.
