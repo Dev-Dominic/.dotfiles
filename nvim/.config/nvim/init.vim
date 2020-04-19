@@ -25,6 +25,9 @@ Plug 'flazz/vim-colorschemes'
 " Surround 
 Plug 'tpope/vim-surround'
 
+" Terminal
+Plug 'kassio/neoterm'
+
 " MISC Plugins
 Plug 'Raimondi/delimitMate' " Autocompletes brackets, quotes and parenthesis
 

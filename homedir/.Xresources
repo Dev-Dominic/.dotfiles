@@ -61,3 +61,6 @@ URxvt.tabbed.tab-bg: 4
 URxvt*buffered: false
 URxvt*transparent: true
 URxvt*shading: 35
+
+! Cursor Theme
+Xcursor.size: 10
