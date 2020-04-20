@@ -43,8 +43,8 @@ URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*internalBorder: 0
 URxvt*externalBorder: 0
-URxvt*letterSpace: 0
-URxvt.font: xft:monospace :size=8
+URxvt*letterSpace: 1
+URxvt.font: xft:Source Code Pro Medium:pixelsize=10,xft:SourceHanSansCN-Medium:pixelsize=20
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,resize-font
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
