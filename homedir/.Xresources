@@ -62,7 +62,7 @@ URxvt*cursorColor:  #bbc5ff
 
 
 ! Rofi
-rofi.font: monospace 12
+rofi.font: Source Code Pro Medium 8
 rofi.padding: 20
 rofi.line-padding: 2
 rofi.color-enabled: true
@@ -84,8 +84,8 @@ URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*internalBorder: 0
 URxvt*externalBorder: 0
-URxvt*letterSpace: 1
-URxvt.font: xft:Source Code Pro Medium:pixelsize=10,xft:SourceHanSansCN-Medium:pixelsize=20
+URxvt*letterSpace: 1 
+URxvt.font: xft:Iosevka Term:pixelsize=10,xft:SourceHanSansCN-Medium:pixelsize=20
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,resize-font
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
