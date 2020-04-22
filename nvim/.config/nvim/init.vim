@@ -45,8 +45,18 @@ set number
 set relativenumber
 
 " Setting colorscheme
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme dracula
 highlight Normal ctermbg=none
+
+" Splits and Tabbed Files
+set splitbelow splitright
+
+" Navigating splits
+noremap <C-h> <C-w>h
+noremap <C-l> <C-w>l
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
 
 " NERD STUFF 
 " NerdTree Config
@@ -62,7 +72,7 @@ noremap <leader>n :NERDTreeToggle<CR>
     ""Deleted"   : "✖",
     ""Dirty"     : "✗",
     ""Clean"     : "✔︎",
-    "'Ignored'   : '☒',
+    ""Ignored"   : '☒',
     ""Unknown"   : "?"
 "}
 
