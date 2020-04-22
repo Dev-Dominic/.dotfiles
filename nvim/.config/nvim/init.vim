@@ -25,6 +25,12 @@ Plug 'flazz/vim-colorschemes'
 " Allow for closing of delimiters
 Plug 'cohama/lexima.vim'
 
+" Css-coloring
+Plug 'ap/vim-css-color'
+
+" Goyo
+Plug 'junegunn/goyo.vim'
+
 call plug#end()
 
 " Leader key 
