@@ -36,6 +36,9 @@ call plug#end()
 " Leader key 
 let mapleader = ","
 
+" Disable show mode
+set noshowmode
+
 " Disable autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -49,6 +52,11 @@ set smartindent
 " Line numbers
 set number
 set relativenumber
+
+" Lightline settings
+let g:lightline = {
+    \ 'colorscheme' : 'darcula',
+    \}
 
 " Setting colorscheme
 "colorscheme gruvbox
@@ -94,3 +102,4 @@ let g:md_pdf_viewer="zathura" " Default Pdf previewer
 let g:mkdp_browser = 'brave'
 let g:mkdp_port = '9000'
 noremap <leader>pm :MarkdownPreviewToggle<CR>
+
