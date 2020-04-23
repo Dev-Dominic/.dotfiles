@@ -16,6 +16,9 @@ alias programFolder="~/Documents/Programming_Folder"
 alias evim='vim ~/.dotfiles/nvim/.config/nvim/init.vim' # Opens for edits to neovim config
 alias qvim='vim ~/.config/qtile/config.py'  # Opens for edits to qtile config
 
+# Start Python virutal environment
+alias start_venv='source venv/bin/activate'
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME

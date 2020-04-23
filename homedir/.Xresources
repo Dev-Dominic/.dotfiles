@@ -1,26 +1,4 @@
-! Base colors
-!*.foreground:  #E1E1E1
-!*.background:  #001c2023
-!*.cursorColor: #778899
-
-!*.color0:  #1c2023
-!*.color1:  #bf616a
-!*.color2:  #a3be8c
-!*.color3:  #ebcb8b
-!*.color4:  #8fa1b3
-!*.color5:  #b48ead
-!*.color6:  #96b5b4
-!*.color7:  #E1E1E1
-!*.color8:  #919ba0
-!*.color9:  #bf616a
-!*.color10: #a3be8c
-!*.color11: #ebcb8b
-!*.color12: #8fa1b3
-!*.color13: #b48ead
-!*.color14: #96b5b4
-!*.color15: #c0c5ce
-
-! Dracula Xresources palette
+! Base Colrs Dracula Xresources palette
 !! COLORS
 
 ! special
@@ -85,7 +63,7 @@ URxvt*scrollBar_right: false
 URxvt*internalBorder: 0
 URxvt*externalBorder: 0
 URxvt*letterSpace: 1 
-URxvt.font: xft:Iosevka Term:pixelsize=10,xft:SourceHanSansCN-Medium:pixelsize=20
+URxvt.font: xft:Iosevka Term:pixelsize=12,xft:SourceHanSansCN-Medium:pixelsize=20
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,resize-font
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
