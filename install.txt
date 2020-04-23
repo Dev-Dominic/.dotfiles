@@ -12,4 +12,6 @@ zathura
 libre-office
 base-devel
 stow 
-
+insomnia
+brave
+flameshot
