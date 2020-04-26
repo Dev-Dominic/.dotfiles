@@ -112,3 +112,8 @@ let g:mkdp_browser = 'brave'
 let g:mkdp_port = '9000'
 noremap <leader>pm :MarkdownPreviewToggle<CR>
 
+" COC.NVIM config 
+
+" Python config
+let g:python3_host_prog = '~/.linux_config/.dotfiles/nvim/.config/nvim/py-venv-config/bin/python'
+

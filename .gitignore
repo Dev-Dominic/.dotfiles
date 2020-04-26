@@ -2,3 +2,5 @@ nvim/.config/nvim/plugged/*
 qtile/.config/qtile/__pycache__/*
 qtile/.config/qtile/__pycache__
 __pycache__
+.dotfiles/nvim/.config/nvim/py-venv-config/*
+.dotfiles/nvim/.config/nvim/plugged/*
