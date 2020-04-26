@@ -34,7 +34,7 @@ Plug 'junegunn/goyo.vim'
 
 " Language Plugins
 Plug 'vim-scripts/indentpython.vim' " Proper python indentation
-Plug 'ycm-core/YouCompleteMe' " Code-completion engine
+Plug 'neoclide/coc.nvim', {'branch': 'release'}  
 
 call plug#end()
 
