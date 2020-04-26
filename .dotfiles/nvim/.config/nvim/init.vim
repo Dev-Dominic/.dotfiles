@@ -15,6 +15,7 @@ Plug 'airblade/vim-gitgutter'
 " Markdown Previews
 Plug 'conornewton/vim-pandoc-markdown-preview' " Pandoc Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " Browser markdown preview
+" :MarkdownPreview
 
 " Neovim bottom bar (lightline)
 Plug 'itchyny/lightline.vim'
