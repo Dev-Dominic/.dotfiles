@@ -6,6 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Aliases 
 alias vim=nvim
+alias pip=pip3
 
 # Folder Aliases
 alias courseFolder="~/OneDrive/UWI\ FOLDER/Course\ Notes"
