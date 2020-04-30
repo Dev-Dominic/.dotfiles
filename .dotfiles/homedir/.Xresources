@@ -40,7 +40,7 @@ URxvt*cursorColor:  #bbc5ff
 
 
 ! Rofi
-rofi.font: Source Code Pro Medium 8
+rofi.font: Iosevka 10
 rofi.padding: 20
 rofi.line-padding: 2
 rofi.color-enabled: true
@@ -57,7 +57,6 @@ URxvt*saveline: 15000
 URxvt*termName: rxvt-unicode-256color
 URxvt*iso14755: true
 URxvt*depth: 32
-!URxvt*background: [95]#1C2023
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*internalBorder: 0

@@ -124,8 +124,8 @@ screens = [
 ]
 
 widget_defaults = dict(
-    font='Arial',
-    fontsize=15,
+    font='Iosevka',
+    fontsize=12,
 )
 
 auto_fullscreen = True
