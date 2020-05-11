@@ -52,7 +52,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab " Converts tabs into spaces
 set smartindent
-set colorcolumn=80
+set colorcolumn=81
+set tw=80
 
 " Line numbers
 set number
@@ -108,7 +109,8 @@ noremap <leader>n :NERDTreeToggle<CR>
 let g:md_pdf_viewer="zathura" " Default Pdf previewer
 
 " Markdown-Preview
-let g:mkdp_browser = 'brave'
+"let g:mkdp_browser = 'brave'
+let g:mkdp_browser = 'qutebrowser'
 let g:mkdp_port = '9000'
 noremap <leader>pm :MarkdownPreviewToggle<CR>
 
@@ -122,8 +124,8 @@ noremap <leader>pm :MarkdownPreviewToggle<CR>
 set hidden
 
 " Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
+" set nobackup
+" set nowritebackup
 
 " Give more space for displaying messages.
 set cmdheight=2
