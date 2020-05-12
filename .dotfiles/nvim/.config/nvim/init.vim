@@ -86,6 +86,11 @@ noremap <C-l> <C-w>l
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 
+" Navigating buffers
+noremap <silent> <TAB>j :bprevious<CR>
+noremap <silent> <TAB>k :bnext<CR>
+noremap <silent> <TAB>l :bdelete<CR>
+
 " NERD STUFF
 " NerdTree Config
 noremap <leader>n :NERDTreeToggle<CR>
