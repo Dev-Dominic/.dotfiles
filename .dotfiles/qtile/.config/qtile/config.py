@@ -55,6 +55,9 @@ keys = [
         [], "XF86AudioMute",
         lazy.spawn("pactl set-sink-mute 0 toggle")
     ),
+
+    # Application Shortcuts
+    Key([mod], 'w' , lazy.spawn('qutebrowser'))
 ]
 
 # Mouse bindings and options
