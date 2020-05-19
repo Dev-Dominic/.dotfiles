@@ -11,7 +11,7 @@ keys = [
     # Window manager controls
     Key([mod, 'control'], 'r', lazy.restart()),
     Key([mod, 'control'], 'q', lazy.shutdown()),
-    Key([mod], 'Return', lazy.spawn('urxvt')),
+    Key([mod], 'Return', lazy.spawn('alacritty')),
     Key([mod, 'shift'], 'q',      lazy.window.kill()),
 
     Key([mod], 'Left', lazy.screen.prevgroup()),

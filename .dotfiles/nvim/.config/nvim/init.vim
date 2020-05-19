@@ -107,7 +107,7 @@ let g:md_pdf_viewer="zathura" " Default Pdf previewer
 "let g:mkdp_browser = 'brave'
 let g:mkdp_browser = 'qutebrowser'
 let g:mkdp_port = '9000'
-noremap <leader>pm :MarkdownPreviewToggle<CR>
+noremap <leader>pm :MarkdownPreview<CR>
 
 
 """"""""""""""""""
