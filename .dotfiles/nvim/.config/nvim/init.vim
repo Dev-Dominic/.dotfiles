@@ -14,7 +14,7 @@ Plug 'airblade/vim-gitgutter'
 
 " Markdown Previews
 Plug 'conornewton/vim-pandoc-markdown-preview' " Pandoc Markdown Preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } } " Browser markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " :MarkdownPreview
 
 " Neovim bottom bar (lightline)
@@ -22,6 +22,7 @@ Plug 'itchyny/lightline.vim'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
+Plug 'dracula/vim', {'name': 'dracula'}
 
 " Allow for closing of delimiters
 Plug 'cohama/lexima.vim'
@@ -267,4 +268,3 @@ let g:python3_host_prog = expand("~/.linux_config/.dotfiles/nvim/.config/nvim/ve
 "
 " END
 """"""""""""""""""
-
