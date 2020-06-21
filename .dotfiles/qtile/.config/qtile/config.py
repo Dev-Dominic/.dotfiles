@@ -2,6 +2,7 @@ from libqtile import bar, hook, layout, widget
 from libqtile.command import lazy
 from libqtile.config import Click, Drag, Group, Key, Screen
 import os
+import subprocess
 
 wmname = 'qtile'
 mod = 'mod1'
@@ -78,13 +79,10 @@ groups = [
     Group('s'),
     Group('d'),
     Group('f'),
-    Group('u'),
-    Group('i'),
-    Group('o'),
-    Group('p'),
+    Group('u')
 ]
 for i in groups:
-    # mod + letter of group = switch to group
+    # mod + le,,,,tter of group = switch to group
     keys.append(Key([mod], i.name, lazy.group[i.name].toscreen()))
 
     # mod + shift + letter of group = switch to & move focused window to group
@@ -133,12 +131,13 @@ widget_defaults = dict(
 
 auto_fullscreen = True
 
-def autostart(): 
-    os.system('feh --bg-scale ~/Pictures/wallpapers/akira_wallpaper.png')
+@hook.subscribe.startup
+def autostart():
+    auto_script_path = '~/.linux_config/.dotfiles/qtile/.config/qtile/autostart.sh'
+    home = os.path.expanduser(auto_script_path)
+    subprocess.call([home])
 
-def main(qtile):
-    autostart()
-
-    # Pulseaudio volume control daemon
-    lazy.spawn('pulseaudio --start')
-    lazy.spawn('pactl set-sink-volume 0 25%') # Default boot volume
+# def main(qtile):
+    # # Pulseaudio volume control daemon
+    # lazy.spawn('pulseaudio --start')
+    # lazy.spawn('pactl set-sink-volume 0 25%') # Default boot volume
