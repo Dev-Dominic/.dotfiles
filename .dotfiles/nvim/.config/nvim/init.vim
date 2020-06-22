@@ -40,6 +40,9 @@ Plug 'vimwiki/vimwiki'
 " Highlights trailing whitespace
 Plug 'bronson/vim-trailing-whitespace'
 
+" Get good at vim
+Plug 'ThePrimeagen/vim-be-good'
+
 call plug#end()
 
 " Leader key
@@ -59,6 +62,9 @@ set smartindent
 set colorcolumn=81
 set textwidth=80
 set wrap
+
+" Cursor line
+set cursorline
 
 " Line numbers
 set number

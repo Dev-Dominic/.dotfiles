@@ -136,8 +136,3 @@ def autostart():
     auto_script_path = '~/.linux_config/.dotfiles/qtile/.config/qtile/autostart.sh'
     home = os.path.expanduser(auto_script_path)
     subprocess.call([home])
-
-# def main(qtile):
-    # # Pulseaudio volume control daemon
-    # lazy.spawn('pulseaudio --start')
-    # lazy.spawn('pactl set-sink-volume 0 25%') # Default boot volume
