@@ -43,6 +43,9 @@ Plug 'bronson/vim-trailing-whitespace'
 " Get good at vim
 Plug 'ThePrimeagen/vim-be-good'
 
+" Productivity Metric
+Plug 'wakatime/vim-wakatime'
+
 call plug#end()
 
 " Leader key
@@ -59,9 +62,13 @@ set tabstop=4
 set shiftwidth=4
 set expandtab " Converts tabs into spaces
 set smartindent
-set colorcolumn=81
+set colorcolumn=80
 set textwidth=80
 set wrap
+
+" Set indentation for Javascript files
+autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
+
 
 " Cursor line
 set cursorline
@@ -80,8 +87,8 @@ let g:lightline = {
     \}
 
 " Setting colorscheme
-"colorscheme gruvbox
-colorscheme dracula
+colorscheme gruvbox
+"colorscheme dracula
 highlight Normal ctermbg=none
 
 " Splits and Tabbed Files
@@ -112,7 +119,8 @@ let g:md_pdf_viewer="zathura" " Default Pdf previewer
 
 " Markdown-Preview
 "let g:mkdp_browser = 'brave'
-let g:mkdp_browser = 'qutebrowser'
+"let g:mkdp_browser = 'qutebrowser'
+let g:mkdp_browser = 'chromium'
 let g:mkdp_port = '9000'
 noremap <leader>pm :MarkdownPreview<CR>
 
@@ -274,3 +282,10 @@ let g:python3_host_prog = expand("~/.linux_config/.dotfiles/nvim/.config/nvim/ve
 "
 " END
 """"""""""""""""""
+
+""""""""""""""""""""""""""""
+"
+" Typescript/Javascript
+"
+""""""""""""""""""""""""""""
+" command! -nargs=0 Prettier :CocCommand prettier.formatFile

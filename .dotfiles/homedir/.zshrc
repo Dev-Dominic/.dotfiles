@@ -5,9 +5,10 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Exporting pattoo config path
-export PATTOO_CONFIGDIR='/home/dominic/Documents/Programming_Folder/pattoo/config'
+alias _calico='/opt/Calico'
+alias _pattoo='/opt/Calico/pattoo'
 
-# Aliases 
+# Aliases
 alias vim=nvim
 alias pip=pip3
 
@@ -16,7 +17,10 @@ alias courseFolder="~/OneDrive/UWI\ FOLDER/Course\ Notes"
 alias compFolder="~/OneDrive/UWI\ FOLDER/Course\ Notes/Computer\ Science"
 alias programFolder="~/Documents/Programming_Folder"
 
-# Open file Aliases 
+# Blog
+alias blog="~/Documents/Programming_Folder/Dev-Dominic-Blog"
+
+# Open file Aliases
 alias evim='vim ~/.config/nvim/init.vim' # Opens for edits to neovim config
 alias qvim='vim ~/.config/qtile/config.py'  # Opens for edits to qtile config
 
