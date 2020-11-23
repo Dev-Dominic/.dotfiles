@@ -22,6 +22,7 @@ Plug 'itchyny/lightline.vim'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
+Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'dracula/vim', {'name': 'dracula'}
 
 " Allow for closing of delimiters
@@ -83,7 +84,7 @@ nnoremap <F3> :set hlsearch!<CR>
 
 " Lightline settings
 let g:lightline = {
-    \ 'colorscheme' : 'darcula',
+    \ 'colorscheme' : 'gruvbox',
     \}
 
 " Setting colorscheme
@@ -276,7 +277,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
-let g:python3_host_prog = expand("~/.linux_config/.dotfiles/nvim/.config/nvim/venv/bin/python") "
+"let g:python3_host_prog = expand("~/.linux_config/.dotfiles/nvim/.config/nvim/venv/bin/python") "
 """"""""""""""""""
 " COC.NVIM config
 "

@@ -1,28 +1,39 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source /usr/share/nvm/init-nvm.sh
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Exporting pattoo config path
 alias _calico='/opt/Calico'
 alias _pattoo='/opt/Calico/pattoo'
+alias _pattoo_web='/opt/Calico/pattoo-web'
 
 # Aliases
 alias vim=nvim
 alias pip=pip3
 
 # Folder Aliases
-alias courseFolder="~/OneDrive/UWI\ FOLDER/Course\ Notes"
-alias compFolder="~/OneDrive/UWI\ FOLDER/Course\ Notes/Computer\ Science"
+alias courseFolder="~/Documents/OneDrive/UWI\ FOLDER/Course\ Notes"
+alias compFolder="~/Documents/OneDrive/UWI\ FOLDER/Course\ Notes/Computer\ Science"
 alias programFolder="~/Documents/Programming_Folder"
+alias compNotes="~/Documents/OneDrive/UWI\ FOLDER/Course\ Notes/Computer\ Science/UWI_NOTES"
+alias NorusTech="~/Documents/Programming_Folder/NorusTech"
 
 # Blog
 alias blog="~/Documents/Programming_Folder/Dev-Dominic-Blog"
 
 # Open file Aliases
 alias evim='vim ~/.config/nvim/init.vim' # Opens for edits to neovim config
-alias qvim='vim ~/.config/qtile/config.py'  # Opens for edits to qtile config
+#alias qvim='vim ~/.config/qtile/config.py'  # Opens for edits to qtile config
+alias qvim='vim ~/.config/i3/config'  # Opens for edits to i3 config
+alias tvim='vim ~/.config/alacritty/alacritty.yml' # Opens for edits to neovim config
 
 # Python aliases
 alias start_venv='source venv/bin/activate' # start virtual environment
@@ -96,6 +107,7 @@ plugins=(
     archlinux
     vi-mode
     sudo
+    zsh-wakatime
 )
 
 source $ZSH/oh-my-zsh.sh
