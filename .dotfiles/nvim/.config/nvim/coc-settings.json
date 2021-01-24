@@ -1,16 +1,28 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "python",
+    "javascript",
+    "typescript",
+    "graphql",
+    "html",
+    "yaml",
+    "json"
+  ],
+  "coc.preferences.formatOnType": true,
 
   // python config
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "python.jediPath": "/home/dominic/.local/lib/python3.8/site-packages",
 
-  "snippets.ultisnips.directories": 
-  [
-    "UltiSnips",
-    "~/.config/nvim/utils/snips"
-  ],
+  // typescript/javascript
+  "tsserver.formatOnType": true,
+  "prettier.bracketSpacing": true,
+  "prettier.formatterPriority": 100,
+
+  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
   "cSpell.userWords": [
     "Achang",
     "Blang",
@@ -35,5 +47,4 @@
     "werkzeug",
     "wtforms"
   ]
-
 }

@@ -35,17 +35,11 @@ Plug 'ap/vim-css-color'
 Plug 'vim-scripts/indentpython.vim' " Proper python indentation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Vimwiki
-Plug 'vimwiki/vimwiki'
-
 " Highlights trailing whitespace
 Plug 'bronson/vim-trailing-whitespace'
 
 " Get good at vim
 Plug 'ThePrimeagen/vim-be-good'
-
-" Productivity Metric
-Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 
@@ -67,8 +61,10 @@ set colorcolumn=80
 set textwidth=80
 set wrap
 
-" Set indentation for Javascript files
-autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
+" Set indentation for Javascript/Typescript/Json files
+autocmd FileType javascript setlocal ts=2 sw=2 expandtab
+autocmd FileType typescript setlocal ts=2 sw=2 expandtab
+autocmd FileType json setlocal ts=2 sw=2 expandtab
 
 
 " Cursor line
@@ -84,12 +80,12 @@ nnoremap <F3> :set hlsearch!<CR>
 
 " Lightline settings
 let g:lightline = {
-    \ 'colorscheme' : 'gruvbox',
+    \ 'colorscheme' : 'dracula',
     \}
 
 " Setting colorscheme
-colorscheme gruvbox
-"colorscheme dracula
+"colorscheme gruvbox
+colorscheme dracula
 highlight Normal ctermbg=none
 
 " Splits and Tabbed Files
@@ -131,6 +127,10 @@ noremap <leader>pm :MarkdownPreview<CR>
 "
 " START
 """"""""""""""""""
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-eslint'
+  \ ]
 
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -289,4 +289,11 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " Typescript/Javascript
 "
 """"""""""""""""""""""""""""
-" command! -nargs=0 Prettier :CocCommand prettier.formatFile
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
