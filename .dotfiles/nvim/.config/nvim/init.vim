@@ -7,7 +7,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'xuyuanp/nerdtree-git-plugin'
 
 " Fuzzy Finder
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -41,7 +43,18 @@ Plug 'bronson/vim-trailing-whitespace'
 " Get good at vim
 Plug 'ThePrimeagen/vim-be-good'
 
+" Startify
+Plug 'mhinz/vim-startify'
+
+
 call plug#end()
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 
 " Leader key
 let mapleader = ","

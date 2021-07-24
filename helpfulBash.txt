@@ -2,7 +2,7 @@
     * -r or -R is recursive,
     * -n is line number, and
     * -w stands for match the whole word.
-    * -l (lower-case L) can be added to just give the file name of matching files. 
+    * -l (lower-case L) can be added to just give the file name of matching files.
 
 "netstat -tulpn | grep LISTEN" (Get's all open sockets TCP/UDP on system)
    * -t : All TCP ports
