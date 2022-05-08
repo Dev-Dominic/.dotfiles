@@ -1,9 +1,18 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Linux Configurations
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# MacOS NVM Configuration
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -18,11 +27,17 @@ alias vim=nvim
 alias pip=pip3
 
 # Folder Aliases
-alias courseFolder="~/Documents/OneDrive/UWI\ FOLDER/Course\ Notes"
-alias compFolder="~/Documents/OneDrive/UWI\ FOLDER/Course\ Notes/Computer\ Science"
 alias programFolder="~/Documents/Programming_Folder"
-alias compNotes="~/Documents/OneDrive/UWI\ FOLDER/Course\ Notes/Computer\ Science/UWI_NOTES"
+
+# Norus Project Aliases
 alias NorusTech="~/Documents/Programming_Folder/NorusTech"
+alias blueprint="~/Documents/Programming_Folder/NorusTech/Blueprint"
+alias blueprint-backend="~/Documents/Programming_Folder/NorusTech/Blueprint/blueprint-backend"
+alias blueprint-frontend="~/Documents/Programming_Folder/NorusTech/Blueprint/blueprint-frontend"
+alias jjway-accred="~/Documents/Programming_Folder/NorusTech/JJwayAccred"
+alias jjway-accred-backend="~/Documents/Programming_Folder/NorusTech/JJwayAccred/JJWay-accreditation-backend"
+alias jjway-accred-frontend="~/Documents/Programming_Folder/NorusTech/JJwayAccred/JJWay-accreditation-frontend"
+alias sage="~/Documents/Programming_Folder/NorusTech/SAGE"
 
 # Blog
 alias blog="~/Documents/Programming_Folder/Dev-Dominic-Blog"
@@ -134,3 +149,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"

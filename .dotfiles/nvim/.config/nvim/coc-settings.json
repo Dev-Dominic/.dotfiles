@@ -1,4 +1,28 @@
 {
+  "languageserver":{
+    "ccls": {
+          "command": "ccls",
+            "filetypes": [
+                "c",
+                "cpp",
+                "objc",
+                "objcpp"
+            ],
+            "rootPatterns": [
+                ".ccls",
+                "compile_commands.json",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/ccls"
+                }
+            }
+        }
+    }
+
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
@@ -46,5 +70,6 @@
     "unhashed",
     "werkzeug",
     "wtforms"
-  ]
+  ],
+  "svelte.enable-ts-plugin": true
 }

@@ -10,6 +10,13 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+
+" DevIcons
+Plug 'kyazdani42/nvim-web-devicons'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -36,6 +43,11 @@ Plug 'ap/vim-css-color'
 " Language Plugins
 Plug 'vim-scripts/indentpython.vim' " Proper python indentation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'epilande/vim-es2015-snippets'
+Plug 'mlaursen/vim-react-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'vim-scripts/loremipsum'
+Plug 'jxnblk/vim-mdx-js'
 
 " Highlights trailing whitespace
 Plug 'bronson/vim-trailing-whitespace'
@@ -49,15 +61,14 @@ Plug 'mhinz/vim-startify'
 
 call plug#end()
 
+" Leader key
+let mapleader = ","
+
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-
-" Leader key
-let mapleader = ","
 
 " Disable show mode
 set noshowmode
@@ -169,11 +180,14 @@ set signcolumn=yes
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
+" VimEnter used to remap <TAB> completion after everything else has loaded, used
+" to override <TAB> mappings from other plugins.
+autocmd VimEnter * inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+autocmd VimEnter * inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+let g:UtilSnipsExpandTrigger = '<c-space>'
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -290,7 +304,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
-"let g:python3_host_prog = expand("~/.linux_config/.dotfiles/nvim/.config/nvim/venv/bin/python") "
+let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.10/bin/python3'
 """"""""""""""""""
 " COC.NVIM config
 "
@@ -310,3 +324,39 @@ if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" Treesiter Configuration
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
+  ignore_install = { "javascript" }, -- List of parsers to ignore installing
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = { "c", "rust" },  -- list of language that will be disabled
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
+
+" DevIcons Configuration
+lua <<EOF
+require'nvim-web-devicons'.setup {
+ -- your personnal icons can go here (to override)
+ -- DevIcon will be appended to `name`
+ override = {
+  zsh = {
+    icon = "",
+    color = "#428850",
+    name = "Zsh"
+  }
+ };
+ -- globally enable default icons (default to false)
+ -- will get overriden by `get_icons` option
+ default = true;
+}
+EOF
